@@ -16,3 +16,5 @@ __"5-listfilesdigitonly"__ is a script that displays current directory contents:
 * Long Format.
 * User groups and IDs displayed numerically.
 * Shows all hidden files.
+
+__"6-firstdirectory"__is a script that creates a directory named my_first_directory in the /tmp/ directory.
