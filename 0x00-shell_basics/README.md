@@ -1,4 +1,7 @@
-# This is a directory for all my shell scripts.
+# This is a directory for all my shell basics scripts.
+
+### Bellow are a list of the scripts and the tasks they perform.
+
 __0-current_working_directory__ is a script that prints the absolute path name of the current working directory.
 
 __1-listit__ displays current directory contents.
