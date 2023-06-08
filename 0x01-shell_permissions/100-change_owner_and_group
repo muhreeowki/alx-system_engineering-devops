@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "!*." -exec chown vincent {}; chgrp staff {} + \
+find . -name "*" -exec chown [vincent][[:staff]] {} + 
