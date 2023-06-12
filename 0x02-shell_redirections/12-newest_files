@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --color="auto" -t1
+ls --color="auto" -t1 | head
