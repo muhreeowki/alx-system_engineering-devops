@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\\n" 50
+printf "%x\\n" $DECIMAL
