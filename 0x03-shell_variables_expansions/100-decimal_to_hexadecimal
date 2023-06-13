@@ -1,2 +1,2 @@
 #!/bin/bash
-obase=16 echo $DECIMAL
+printf "%x\\n" 50
