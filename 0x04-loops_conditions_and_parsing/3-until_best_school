@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is printing "Best School" 10 times to the std output
+i=0
+
+until [ $i -gt 9 ];
+do 
+  echo "Best School"
+  ((i++))
+done
