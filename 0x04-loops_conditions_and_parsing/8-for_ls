@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is printing "Best School" 10 times to the std output
+hour=0
+
+for file in *; do
+  echo $file | sed 's/^[0-9]*[-]//'
+done
