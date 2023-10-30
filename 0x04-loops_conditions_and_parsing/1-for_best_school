@@ -2,9 +2,7 @@
 # This script is printing "Best School" 10 times to the std output
 for i in {1..10}
   do 
-    if [[ $i -lt 10 ]]; then
+    if [[ $i -gt 0 ]]; then
       echo "Best School"
-    else
-      echo -n "Best School"
     fi
 done
