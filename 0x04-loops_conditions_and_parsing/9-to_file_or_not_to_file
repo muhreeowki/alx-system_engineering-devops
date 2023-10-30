@@ -2,13 +2,13 @@
 # This script is printing "Best School" 10 times to the std output
 if test -e school; then
   echo "school file exists"
+  if test -f school; then
+    echo "school is a regular file"
+  fi
   if ! [ -s school ]; then
     echo "school file is empty"
   else
     echo "school file is not empty"
-    if test -f school; then
-      echo "school is a regular file"
-    fi
   fi
 else
   echo "school file does not exist"
