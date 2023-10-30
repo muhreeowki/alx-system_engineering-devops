@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # This script is printing "Best School" 10 times to the std output
-result=$(file -b school)
 if test -e school; then
   echo "school file exists"
   if ! [ -s school ]; then
