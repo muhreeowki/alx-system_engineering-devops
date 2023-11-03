@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Script that configures an Ubuntu server with the below requirements.
+#Requirements:
+#    localhost resolves to 127.0.0.2
+#    facebook.com resolves to 8.8.8.8.
+flag=0
+for line in $(ifconfig)
+do
+  if [[ $flag -eq 1 ]]; then
+    echo "$line"
+    flag=0
+  fi
+  if [[ $line == "inet" ]]; then
+    flag=1
+  fi
+done
