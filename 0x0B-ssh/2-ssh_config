@@ -1,0 +1,8 @@
+# ssh config file
+
+# Global settings that apply to all hosts
+Host *
+# Use a specific identity file
+IdentityFile ~/.ssh/school
+# Disable passwords
+BatchMode yes
