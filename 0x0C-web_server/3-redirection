@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # Script that installs Nginx on a server
-# Install Nginx
+
 apt-get -y update
 apt-get -y install nginx
-# Rewrite the default html page
+ufw allow 'Nginx HTTP'
 echo "Hello World!" >/var/www/html/index.nginx-debian.html
 sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
-# Restart the web server
 service nginx restart
