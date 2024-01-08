@@ -24,8 +24,8 @@ frontend myfrontend
 
 backend web_servers
   balance roundrobin
-  server web-01 100.25.33.139:80 check
-  server web-02 54.146.73.237:80 check
+  server 427439-web-01 100.25.33.139:80 check
+  server 427439-web-02 54.146.73.237:80 check
 " >/etc/haproxy/haproxy.cfg
 
 # Start the server
