@@ -7,7 +7,9 @@ ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html
 touch /var/www/html/index.html
 echo "Hello World!" >/var/www/html/index.html
-
+# Setup 404 html file
+echo "Ceci n'est pas une page" >/var/www/html/404.html
+# Setup Nginx Config File
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -25,7 +27,5 @@ printf %s "server {
       internal;
     }
 }" >/etc/nginx/sites-available/default
-
-# Setup 404 html file
-echo "Ceci n'est pas une page" >/var/www/html/404.html
+# Restart the nginx server
 service nginx restart
