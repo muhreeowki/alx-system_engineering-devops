@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Load balancer setup file
 
 balancer="\
 frontend haproxy_balancer
