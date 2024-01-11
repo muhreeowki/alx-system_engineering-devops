@@ -2,4 +2,4 @@
 # Go to sites enabled folder, or exit
 rm /etc/nginx/sites-enabled/default || exit
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service stop nginx
+service restart nginx
