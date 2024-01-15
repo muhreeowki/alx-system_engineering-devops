@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Go to sites enabled folder, or exit
-rm /etc/nginx/sites-enabled/default || exit
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service restart nginx
+#Sets nginx for listening to 80 port
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+kill -9 "$(cat /var/run/nginx.pid)"

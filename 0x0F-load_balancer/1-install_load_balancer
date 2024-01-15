@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # Load balancer setup file
 
-balancer="\
-frontend haproxy_balancer
+balancer="
+frontend my_frontend
     mode http
     bind :80
     default_backend web_servers
 
 backend web_servers
     balance roundrobin
-    server 427439-web-01 100.25.33.139:80 check
-    server 427439-web-02 54.146.73.237:80 check
+    server 427439-web-01 54.174.43.223:80 check
+    server 427439-web-02 18.235.255.170:80 check
 "
 
 # Update packages

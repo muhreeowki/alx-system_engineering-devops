@@ -19,7 +19,7 @@ package { 'nginx':
 exec { 'allow HTTP':
   command => "ufw allow 'Nginx HTTP'",
   path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-  onlyif  => '! dpkg -l nginx | egrep \'îi.*nginx\' > /dev/null 2>&1',
+  onlyif  => '! dpkg -l nginx | egrep \'ii.*nginx\' > /dev/null 2>&1',
 }
 
 # change folder rights
@@ -54,6 +54,7 @@ file { 'Nginx default config file':
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 try_files \$uri \$uri/ =404;
+                add_header X-Served-By $hostname
         }
         error_page 404 /404.html;
         location  /404.html {
